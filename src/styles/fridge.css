@@ -1,0 +1,255 @@
+/* ===== Scan Fridge Page ===== */
+.fridge-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fridge-form {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 28px;
+}
+
+/* Tip box */
+.fridge-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.fridge-tip svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.fridge-tip p {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* Green spinner */
+.spinner-green {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+}
+
+/* ===== Results ===== */
+.fridge-results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Ingredients Card */
+.ingredients-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 24px;
+}
+
+.ingredients-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 16px;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ingredient-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: var(--secondary-light);
+  color: #15803D;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  transition: transform 0.15s;
+}
+
+.ingredient-tag:hover {
+  transform: scale(1.05);
+}
+
+.fridge-warning {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--warning);
+}
+
+/* Recipes Section */
+.recipes-section {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 24px;
+}
+
+.recipes-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 4px;
+}
+
+.recipes-subtitle {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-bottom: 20px;
+}
+
+/* Recipe Cards Grid */
+.recipe-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recipe-result-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--gray-50);
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.recipe-result-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.1);
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.recipe-card-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recipe-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.recipe-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-result-card:hover .recipe-card-title {
+  color: var(--secondary-hover);
+}
+
+.recipe-card-desc {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recipe-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.view-recipe-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+  transition: color 0.2s;
+}
+
+.recipe-result-card:hover .view-recipe-link {
+  color: var(--secondary-hover);
+}
+
+/* Actions */
+.fridge-result-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.fridge-result-actions .btn {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .fridge-form {
+    padding: 20px;
+  }
+
+  .recipe-result-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-card-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .fridge-result-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .recipe-result-card:hover {
+  background: var(--gray-100);
+}
+
+[data-theme="dark"] .fridge-tip {
+  border-color: rgba(59, 130, 246, 0.2);
+}

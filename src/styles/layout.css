@@ -1,0 +1,45 @@
+/* ===== App Layout ===== */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: var(--container-max);
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: var(--container-padding);
+  min-height: calc(100vh - 48px);
+}
+
+.main-content {
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    padding: 12px;
+  }
+
+  .app-container {
+    padding: 16px;
+    border-radius: 16px;
+    min-height: calc(100vh - 24px);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    padding: 0;
+  }
+
+  .app-container {
+    border-radius: 0;
+    min-height: 100vh;
+    padding: 12px;
+  }
+}

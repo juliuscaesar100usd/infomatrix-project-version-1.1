@@ -1,0 +1,234 @@
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Center Nav Links */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-decoration: none;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Right Controls */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  color: var(--gray-700);
+}
+
+.lang-btn.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.lang-divider {
+  color: var(--gray-300);
+  font-size: 13px;
+  margin: 0 2px;
+}
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--gray-100);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--gray-200);
+  color: var(--gray-800);
+}
+
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 20;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gray-700);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-center,
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 16px 16px;
+    z-index: 10;
+    gap: 12px;
+  }
+
+  .navbar-center.show,
+  .navbar-right.show {
+    display: flex;
+  }
+
+  .navbar-right.show {
+    top: auto;
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    border-top: 1px solid var(--gray-100);
+    padding-top: 16px;
+  }
+
+  .navbar-center.show + .navbar-right.show {
+    position: static;
+  }
+
+  /* When menu is open, combine them */
+  .navbar-center.show {
+    padding-bottom: 0;
+  }
+
+  .navbar-right.show {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+/* Dark mode navbar */
+[data-theme="dark"] .navbar {
+  border-bottom-color: var(--gray-200);
+}
+
+[data-theme="dark"] .navbar-center,
+[data-theme="dark"] .navbar-right {
+  background: var(--card-bg);
+}
