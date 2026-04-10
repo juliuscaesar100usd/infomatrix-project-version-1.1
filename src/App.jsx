@@ -10,6 +10,7 @@ import StatisticsPage from './pages/StatisticsPage';
 import SettingsPage from './pages/SettingsPage';
 import ScanFridgePage from './pages/ScanFridgePage';
 
+
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth();
   if (loading) return <div className="page-loader">Loading...</div>;
