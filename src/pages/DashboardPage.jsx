@@ -232,6 +232,7 @@ export default function DashboardPage() {
         </div>
       </section>
 
+      
       {/* Bottom Feature Cards */}
       <section className="features-section">
         <div className="feature-card">
