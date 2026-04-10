@@ -217,6 +217,7 @@ export default function AddMealPage() {
 
             <p className="approximate-warning">{t('dashboard.approximate')}</p>
 
+            
             {result.analysis?.warning && (
               <p className="ai-warning">ℹ {result.analysis.warning}</p>
             )}
