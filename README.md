@@ -12,7 +12,7 @@ NutriMind AI is a web application that helps users consciously track sugar consu
 - **Sugar-Free Timer** – Track how long you've been sugar-free with a live countdown
 - **Daily Statistics** – View meals logged each day with total sugar consumption
 - **Multi-Language** – Full i18n support for English, Русский, Қазақша
-- **Secure Auth** – JWT-based authentication with bcrypt-hashed passwords
+- **Secure Auth** – JWT-based authentication with bcrypt-hashed password
 - **Responsive Design** – Works on desktop, tablet, and mobile
 
 ---
