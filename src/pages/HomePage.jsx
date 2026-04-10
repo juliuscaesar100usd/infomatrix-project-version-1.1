@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
 import '../styles/home.css';
 
+
 export default function HomePage() {
   const navigate = useNavigate();
   const { t, language, setLanguage } = useLanguage();
